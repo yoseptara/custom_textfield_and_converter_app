@@ -13,6 +13,8 @@ class CustomTextfield extends StatefulWidget {
     this.onChanged,
     this.controller,
     this.keyboardType,
+    this.minLines,
+    this.maxLines,
     required this.label,
   });
 
@@ -24,6 +26,8 @@ class CustomTextfield extends StatefulWidget {
   final void Function(String)? onChanged;
   final TextEditingController? controller;
   final TextInputType? keyboardType;
+  final int? minLines;
+  final int? maxLines;
 
   @override
   State<CustomTextfield> createState() => _CustomTextfieldState();
@@ -110,6 +114,8 @@ class _CustomTextfieldState extends State<CustomTextfield> {
           alignment: Alignment.centerRight,
           children: [
             TextFormField(
+              minLines: widget.minLines,
+              maxLines: widget.maxLines,
               controller: widget.controller,
               onChanged: widget.onChanged,
               maxLength: widget.maxLength,

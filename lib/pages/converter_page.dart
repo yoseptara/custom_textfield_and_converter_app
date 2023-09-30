@@ -120,6 +120,8 @@ class _ConverterPageState extends State<ConverterPage> {
                     controller: outputCtrler,
                     label: 'Output',
                     readOnly: true,
+                    minLines: 3,
+                    maxLines: null,
                   ),
                   const SizedBox(
                     height: 48,
